@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-icon": "../../ui/vantui/icon/index"
+  },
+  "navigationStyle": "custom"
+}

@@ -1,0 +1,20 @@
+<!--pages/about/about.wxml-->
+<view class="UCenter-bg">
+  <view class="cu-avatar xl round margin-center" style="margin-bottom:40rpx;background-image:url({{authorInfo.avatar}});"></view>
+  <view class="text-xl name" style="font-weight: bolder;font-size:35rpx;">{{authorInfo.name}}
+  </view>
+  <view class="margin-top-sm">
+    <text style="font-family: Georgia, serif;font-style: italic;font-size: 20rpx;">{{authorInfo.posts}} posts</text>
+  </view>
+  <image src="../../images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+<view class="padding bg-white shadow-warp"></view>
+
+<view class="pro-grid shadow shadow-lg">
+  <view id="{{item.id}}" data-link="{{item.link}}" class="pro-grid-item" wx:for="{{elements}}" wx:key bindtap="clickFunc">
+    <image src="{{item.img}}" class="pro-grid-img" style='{{item.style}}'></image>
+    <view style="margin-top:3rpx;">{{item.name}}</view>
+  </view>
+</view>
+
+<van-toast id="van-toast" />
