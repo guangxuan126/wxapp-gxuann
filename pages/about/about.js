@@ -97,7 +97,8 @@ Page({
     })
   },
   clickFunc(event) {
-    let id = event.currentTarget.id
+    let id = event.currentTarget.id;
+    wx.vibrateShort();
     if (id == 1) {
       wx.setClipboardData({
         data: event.currentTarget.dataset.link,
@@ -106,11 +107,13 @@ Page({
     }
     if (id == 9) {
       Toast('under development…');
+      wx.vibrateShort();
     }
     if (id==2) {
       wx.navigateTo({
         url: event.currentTarget.dataset.link,
-      })
+      });
+      wx.vibrateShort();
     }
   }
 })
