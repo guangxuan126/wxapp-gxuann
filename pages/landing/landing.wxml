@@ -1,2 +1,18 @@
 <!--pages/landing/landing.wxml-->
-<text>pages/landing/landing.wxml</text>
+<view class="body">
+  <view class="h1">Hello.</view>
+  <view class="b">
+    This is the landing page of the
+    <text class="a">gxuann</text> experimental website.
+  </view>
+  <view class="p">
+    Here we have a WeChat MiniProgram background service, blog and other interesting web pages.
+  </view>
+  <view class="p">
+    WMP: Please search on WeChat. 
+    <view>Blog: Please add blog before the main domain. </view>
+    <view>Other: Find me on
+    <text class="a">Github</text> and
+    <text class="a">Weibo</text>.</view>
+  </view>
+</view>
