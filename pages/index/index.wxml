@@ -1,2 +1,6 @@
 <!--index.wxml-->
 <van-toast id="van-toast" />
+<view class="UCenter-bg" style="{{hidden}}">
+  <image src="../../images/logo.png" class="margin-center logo"></image>
+  <view class="text-xl name" style="font-size:30rpx;">Thinking. Reading & Coding</view>
+</view>
