@@ -9,10 +9,10 @@
     Here we have a WeChat MiniProgram background service, blog and other interesting web pages.
   </view>
   <view class="p">
-    WMP: Please search on WeChat. 
+    WMP: Please search on WeChat.
     <view>Blog: Please add blog before the main domain. </view>
     <view>Other: Find me on
-    <text class="a">Github</text> and
-    <text class="a">Weibo</text>.</view>
+      <text class="a">Github</text> and
+      <text class="a">Weibo</text>.</view>
   </view>
 </view>
