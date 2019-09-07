@@ -8,7 +8,7 @@ App({
     let ghostKey = this.globalData.ghostKey;
 
     wx.request({
-      url: reqUrl + 'posts' + ghostKey,
+      url: reqUrl + 'posts' + ghostKey + '&limit=all',
       header: {
         'Content-Type': 'application/json'
       },
