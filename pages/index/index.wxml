@@ -1,6 +1,17 @@
 <!--index.wxml-->
 <van-toast id="van-toast" />
-<view class="UCenter-bg" style="{{hidden}}">
-  <image src="../../images/logo.png" class="margin-center logo"></image>
-  <view class="text-xl name" style="font-size:30rpx;">Thinking. Reading & Coding</view>
+<view class="UCenter-bg">
+  <image src="../../images/logo.png" class="logo"></image>
+  <view class="text-xl name">Thinking. Reading & Coding</view>
 </view>
+
+<scroll-view class="scroll-view" scroll-y style="height:{{height}}rpx">
+  <navigator>
+    <view class="list">
+      <view class="title-content">
+        <view class="text">微信开发之access_token的获取</view>
+        <view class="date">2019-08-10</view>
+      </view>
+    </view>
+  </navigator>
+</scroll-view>

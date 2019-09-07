@@ -1,22 +1,59 @@
 /**index.wxss**/
+page{
+  height: 100%;
+}
 .UCenter-bg {
-  background-image: url(https://oss.gxuann.cn/wxapp-gxuann/blog-cover.jpg);
+  background-image: url(https://oss.gxuann.cn/wxapp-gxuann/blog-cover.png);
   background-size: cover;
-  height: 550rpx;
+  height: 450rpx;
   display: flex;
   justify-content: center;
-  padding-top: 40rpx;
-  overflow: hidden;
   position: relative;
   flex-direction: column;
   align-items: center;
   color: #fff;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
-  margin-top: 35rpx;
+  text-shadow: 0 0 3rpx rgba(0, 0, 0, 0.4);
+  z-index: 99
 }
 
-.logo{
+.name {
+  font-size: 30rpx;
+}
+
+.logo {
   height: 100rpx;
   width: 100rpx;
-  margin-bottom: 50rpx;
+}
+.scroll-view{
+  position: absolute;
+  top: 330rpx;
+}
+navigator:first-child{
+  margin-top: 150rpx;
+}
+.list{
+  height: 150rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  width: 680rpx;
+  margin-left: 35rpx;
+  box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
+  margin-bottom: 30rpx;
+}
+.title-content {
+  color: #333333;
+  padding:33rpx;
+}
+
+.text {
+  text-align: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 42rpx;
+}
+
+.date {
+  opacity: 0.7;
+  font-size: 20rpx;
+  text-align: right;
 }
