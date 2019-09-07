@@ -5,6 +5,7 @@ import Toast from '../../ui/vantui/toast/toast';
 Page({
   data: {
     posts: null,
+    newPosts: null,
     height: ''
   },
   onLoad: function(options) {
@@ -13,6 +14,7 @@ Page({
   },
   getPostsList() {
     let posts = this.data.posts;
+    let newPosts = this.data.newPosts;
     Toast.loading({
       forbidClick: true,
       message: '加载中...'
@@ -23,9 +25,10 @@ Page({
       })
     } else {
       app.resPostsReadyCallback = res => {
-        this.setData({
-          posts: app.globalData.posts
-        })
+        let resPosts = app.globalData.posts
+        this.setPosts(resPosts);
+        console.log(resPosts)
+        
       }
     }
   },
@@ -43,10 +46,9 @@ Page({
       },
     })
   },
-  setPostsList() {
-    let posts = this.data.posts;
-    if (!posts) {
-
+  setPosts(resPosts){
+    for (let i = 0; i < resPosts.posts.length; i++){
+      resPosts.posts[i].published_at = resPosts.posts[i].published_at.slice(0,10)
     }
   }
 })
