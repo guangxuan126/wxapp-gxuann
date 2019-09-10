@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/about/about",
-    "pages/detail/detial",
+    "pages/detail/detail",
     "pages/projects/projects",
     "pages/landing/landing"
   ],
