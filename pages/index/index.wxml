@@ -6,7 +6,7 @@
 </view>
 
 <scroll-view class="scroll-view" scroll-y style="height:{{height}}rpx">
-  <navigator class="list" wx:for="{{posts}}" wx:key>
+  <navigator class="list" wx:for="{{posts}}" wx:key url="../detail/detail?id={{item.id}}">
     <view >
       <view class="title-content">
         <view class="text">{{item.title}}</view>
