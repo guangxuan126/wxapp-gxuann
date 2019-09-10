@@ -1,17 +1,36 @@
-// pages/detail/detial.js
+// pages/detail/detail.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    id: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let id = this.data.id;
+    this.setData({id: options.id})
+    this.getArticle();
+  },
+  getArticle() {
+    let reqUrl = app.globalData.reqUrl;
+    let ghostKey = app.globalData.ghostKey;
+    let id = this.data.id;
+
+    wx.request({
+      url: reqUrl + 'posts/'+ id + ghostKey,
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: res => {
+        console.log(res)
+      }
+    })
 
   },
 
