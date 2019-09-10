@@ -1,7 +1,9 @@
 /**index.wxss**/
-page{
+
+page {
   height: 100%;
 }
+
 .UCenter-bg {
   background-image: url(https://oss.gxuann.cn/wxapp-gxuann/blog-cover.png);
   background-size: cover;
@@ -13,7 +15,7 @@ page{
   align-items: center;
   color: #fff;
   text-shadow: 0 0 3rpx rgba(0, 0, 0, 0.4);
-  z-index: 99
+  z-index: 99;
 }
 
 .name {
@@ -24,14 +26,17 @@ page{
   height: 100rpx;
   width: 100rpx;
 }
-.scroll-view{
+
+.scroll-view {
   position: absolute;
   top: 330rpx;
 }
-navigator:first-child{
+
+navigator:first-child {
   margin-top: 150rpx;
 }
-.list{
+
+.list {
   height: 150rpx;
   background: #fff;
   border-radius: 15rpx;
@@ -40,9 +45,10 @@ navigator:first-child{
   box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
   margin-bottom: 30rpx;
 }
+
 .title-content {
-  color: #333333;
-  padding:33rpx;
+  color: #333;
+  padding: 33rpx;
 }
 
 .text {

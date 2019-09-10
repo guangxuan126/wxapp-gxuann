@@ -4,9 +4,8 @@ const app = getApp()
 import Toast from '../../ui/vantui/toast/toast';
 Page({
   data: {
-    posts: null,
-    newPosts: null,
-    height: ''
+    posts: [],
+    height: '',
   },
   onLoad: function(options) {
     this.getScrollHeight();
@@ -19,18 +18,21 @@ Page({
       forbidClick: true,
       message: '加载中...'
     });
-    if (app.globalData.posts) {
-      this.setData({
-        posts: app.globalData.posts
-      })
-    } else {
-      app.resPostsReadyCallback = res => {
-        let resPosts = app.globalData.posts
-        this.setPosts(resPosts);
-        console.log(resPosts)
-        
+    app.resPostsReadyCallback = res => {
+      let resPosts = app.globalData;
+      let posts = this.data.posts;
+      this.setPosts(resPosts);
+      Toast.clear	
+      let nPosts =[]
+      for (let i = 0; i < resPosts.posts.length; i++) {
+        nPosts.push(resPosts.posts[i])
       }
+      setTimeout(()=>{
+        this.setData({ posts: nPosts })
+      },3000)
+      console.log(posts)
     }
+
   },
   getScrollHeight() {
     var that = this;
@@ -46,9 +48,9 @@ Page({
       },
     })
   },
-  setPosts(resPosts){
-    for (let i = 0; i < resPosts.posts.length; i++){
-      resPosts.posts[i].published_at = resPosts.posts[i].published_at.slice(0,10)
+  setPosts(resPosts) {
+    for (let i = 0; i < resPosts.posts.length; i++) {
+      resPosts.posts[i].published_at = resPosts.posts[i].published_at.slice(0, 10)
     }
   }
 })
