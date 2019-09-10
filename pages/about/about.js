@@ -71,11 +71,10 @@ Page({
     this.getListCount();
   },
   getListCount() {
-    app.postListRequest().then(res => {
       this.setData({
-        'authorInfo.posts': res.data.posts.length
+        'authorInfo.posts': app.globalData.posts.length
       });
-    })
+
   },
   getAuthorInfo() {
     var that = this;
