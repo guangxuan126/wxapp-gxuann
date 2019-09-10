@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 import Toast from '../../ui/vantui/toast/toast';
 Page({
   data: {
@@ -52,5 +52,6 @@ Page({
     for (let i = 0; i < resPosts.posts.length; i++) {
       resPosts.posts[i].published_at = resPosts.posts[i].published_at.slice(0, 10)
     }
-  }
+  },
+
 })
