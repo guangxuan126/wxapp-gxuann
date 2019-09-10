@@ -13,7 +13,7 @@ App({
         'Content-Type': 'application/json'
       },
       success: res => {
-        this.globalData.posts = res.data;
+        this.globalData.posts = res.data.posts;
         if (this.resPostsReadyCallback) {
           this.resPostsReadyCallback(res)
         }
