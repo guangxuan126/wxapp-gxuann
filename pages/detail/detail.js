@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id: ''
+    id: '',
+    article: {}
   },
 
   /**
@@ -21,6 +22,7 @@ Page({
     let reqUrl = app.globalData.reqUrl;
     let ghostKey = app.globalData.ghostKey;
     let id = this.data.id;
+    let page = this.data.page;
 
     wx.request({
       url: reqUrl + 'posts/'+ id + ghostKey,
@@ -28,7 +30,14 @@ Page({
         'Content-Type': 'application/json'
       },
       success: res => {
-        console.log(res)
+        let resTitle = res.data.posts[0].title;
+        let rs = res.data.posts[0].html;
+        let data = app.towxml.toJson(rs, 'html');
+        this.setData({ article: data})
+        console.log(data)
+        this['event_bind_touchstart'] = (event) => {
+          console.log(event.target.dataset._el);     // 打印出元素信息
+        };
       }
     })
 
