@@ -1,8 +1,10 @@
 //app.js
+const Towxml = require('/towxml/main'); 
 App({
   onLaunch: function() {
     this.postListRequest();
   },
+  towxml: new Towxml(),
   postListRequest() {
     let reqUrl = this.globalData.reqUrl;
     let ghostKey = this.globalData.ghostKey;
