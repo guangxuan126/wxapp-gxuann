@@ -1,1 +1,6 @@
 /* pages/detail/detail.wxss */
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+page{
+  background-color: #fff;
+}
