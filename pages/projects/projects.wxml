@@ -1,2 +1,5 @@
 <!--pages/projects/projects.wxml-->
-<text>pages/projects/projects.wxml</text>
+<image class="bg" src="{{bgUrl}}" mode="aspectFill"></image>
+<import src="/towxml/entry.wxml" />
+<template is="entry" data="{{...article}}" />
+<van-notify id="custom-selector" />

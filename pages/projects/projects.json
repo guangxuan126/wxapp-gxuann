@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-notify": "/ui/vantui/notify/index"
+  },
+  "navigationBarTitleText": "Projects"
 }
