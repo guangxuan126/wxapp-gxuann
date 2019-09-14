@@ -1,3 +1,7 @@
 <!--pages/detail/detail.wxml-->
-<import src="/towxml/entry.wxml"/>
-<template is="entry" data="{{...article}}"/>
+<view class="title">{{resTitle}}</view>
+
+<view bindtap="backToTop"  style="display:{{backTopValue}}"><image class="top" src="/images/top.png"></image></view>
+
+<import src="/towxml/entry.wxml" />
+<template is="entry" data="{{...article}}" />

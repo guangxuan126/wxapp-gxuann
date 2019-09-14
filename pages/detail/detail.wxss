@@ -4,3 +4,19 @@
 page{
   background-color: #fff;
 }
+
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  margin-top: 120rpx;
+}
+
+.top{
+  position: fixed;
+  width: 70rpx;
+  height: 70rpx;
+  right: 40rpx;
+  bottom: 50rpx;
+  opacity: 0.3;
+  z-index: 99
+}

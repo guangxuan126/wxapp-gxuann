@@ -7,7 +7,9 @@ Page({
    */
   data: {
     id: '',
-    article: {}
+    article: {},
+    resTitle: '',
+    backTopValue: 'none'  
   },
 
   /**
@@ -33,16 +35,33 @@ Page({
         let resTitle = res.data.posts[0].title;
         let rs = res.data.posts[0].html;
         let data = app.towxml.toJson(rs, 'html');
-        this.setData({ article: data})
+        this.setData({
+          resTitle: resTitle, 
+          article: data
+          })
         console.log(data)
-        this['event_bind_touchstart'] = (event) => {
-          console.log(event.target.dataset._el);     // 打印出元素信息
-        };
       }
     })
 
   },
 
+  backToTop(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
+    })
+  },
+
+  onPageScroll: function(event) {
+
+    let scrollTop = event.scrollTop;
+    if(scrollTop>500){
+      this.setData({ backTopValue: 'block' });
+    }
+    let backTopValue = scrollTop > 500 ? 'block':'none';
+    this.setData({ backTopValue: backTopValue});
+    console.log(backTopValue)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
