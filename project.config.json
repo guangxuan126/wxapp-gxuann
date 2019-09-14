@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -52,6 +52,20 @@
 					"id": -1,
 					"name": "landing",
 					"pathName": "pages/landing/landing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": " id=5d69c88dc5561f16df67540b",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/projects/projects",
+					"pathName": "pages/projects/projects",
 					"scene": null
 				}
 			]
